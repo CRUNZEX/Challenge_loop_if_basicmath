@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float calculateSD(int num1, int num2, float sum, float sumPow, int c) { // Cal
+float calculateSD(int num1, int num2, float sum, float sumPow, int c) {
 	float sd = sqrt((c * sumPow - sum * sum) / (c * (c - 1)));
 	return sd;
 }
@@ -13,12 +13,13 @@ int main() {
 
 	if (num1 >= num2)
 	{
-		for (int i = num2; i <= num1; i++)
+		for (int i = num1; i >= num2; i--)
 		{
 			printf("%d ", i);
 			sum += i;
 			sumPow += i * i;
 		}
+
 		printf("\nAverage = %.1f", sum / (num1 - num2 + 1));
 		c = num1 - num2 + 1;
 	}
@@ -31,6 +32,7 @@ int main() {
 			sum += i;
 			sumPow += i * i;
 		}
+
 		printf("\nAverage = %.1f", sum / (num2 - num1 + 1));
 		c = num2 - num1 + 1;
 	}
