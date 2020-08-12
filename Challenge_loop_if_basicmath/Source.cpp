@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float calculateSD(int num1, int num2, float sum, float sumPow, int c) {
+float calculateSD(int num1, int num2, float sum, float sumPow, int c) { // Cal
 	float sd = sqrt((c * sumPow - sum * sum) / (c * (c - 1)));
 	return sd;
 }
